@@ -52,4 +52,10 @@ class User extends Authenticatable
             'two_factor_confirmed_at' => 'datetime',
         ];
     }
+
+    // Ideas belongs to users
+    public function ideas()
+    {
+        return $this->hasMany(Idea::class);
+    }
 }
