@@ -1,20 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
+use App\Enums\IdeaStatus;
+use Database\Factories\IdeaFactory;
 use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Enums\IdeaStatus;
-use App\Models\Step;
-
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Idea extends Model
 {
-    /** @use HasFactory<\Database\Factories\IdeaFactory> */
+    /** @use HasFactory<IdeaFactory> */
     use HasFactory;
 
     /**
@@ -33,7 +33,7 @@ class Idea extends Model
      */
     protected $attributes = [
         'links' => '[]',
-        'status' => IdeaStatus::PENDING
+        'status' => IdeaStatus::PENDING,
     ];
 
     public function user(): BelongsTo

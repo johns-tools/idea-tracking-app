@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
 enum IdeaStatus: string
@@ -16,5 +18,4 @@ enum IdeaStatus: string
             self::COMPLETE => 'Complete',
         };
     }
-
 }
