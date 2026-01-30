@@ -33,7 +33,7 @@ class Idea extends Model
      */
     protected $attributes = [
         'links' => '[]',
-        'status' => IdeaStatus::PENDING,
+        'status' => IdeaStatus::PENDING->value,
     ];
 
     public function user(): BelongsTo

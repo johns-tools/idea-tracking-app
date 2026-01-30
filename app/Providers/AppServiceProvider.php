@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
     protected function configureDefaults(): void
     {
         // Added
-        Model::unguard();
+        Model::unguard(); // WARNING!!! Disable mass assignment protection globally for development purposes only. Remove this line in production!
         Model::shouldBeStrict();
         Model::automaticallyEagerLoadRelationships();
 

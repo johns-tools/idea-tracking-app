@@ -6,7 +6,7 @@ use App\Models\Idea;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\step>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Step>
  */
 class StepFactory extends Factory
 {
