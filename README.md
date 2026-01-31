@@ -36,6 +36,14 @@ npm install
 # Copy environment file
 cp .env.example .env
 
+# Configure database credentials in .env
+# Update the following variables to match your database setup:
+# - DB_CONNECTION (typically "mysql" or "sqlite")
+# - DB_DATABASE (your database name)
+# - DB_USERNAME (your database user)
+# - DB_PASSWORD (your database password)
+# This ensures php artisan migrate can connect successfully
+
 # Generate application key
 php artisan key:generate
 
