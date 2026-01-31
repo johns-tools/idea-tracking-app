@@ -10,7 +10,7 @@
                 <label for="name" class="label text-left">Name:</label>
                 <input id="name" type="text" class="input" name="name">
 
-                <!-- email -->
+                <!-- Email -->
                 <label for="email" class="label text-left mt-2">Email:</label>
                 <input id="email" type="email" class="input" name="email">
 
