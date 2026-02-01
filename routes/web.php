@@ -1,14 +1,15 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterUserController;
 use Illuminate\Support\Facades\Route;
+// Controllers.
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
-// Controllers.
-use App\Http\Controllers\RegisterUserController;
-
 // Basic route definitions.
 Route::get('/register', [RegisterUserController::class, 'create'])->middleware('guest')->name('register');
+Route::get('/login', [LoginController::class, 'login'])->middleware('guest')->name('login');
 
 // Inertia-based routes.
 Route::get('/', fn () => Inertia::render('Welcome', [

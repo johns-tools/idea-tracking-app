@@ -6,21 +6,10 @@
 
             <div class="space-y-2">
 
-                <!-- Name -->
-                <label for="name" class="label text-left">Name:</label>
-                <input id="name" type="text" class="input" name="name">
-
-                <!-- Email -->
-                <label for="email" class="label text-left mt-2">Email:</label>
-                <input id="email" type="email" class="input" name="email">
-
-                <!-- Password -->
-                <label for="password" class="label text-left mt-2">Password:</label>
-                <input id="password" type="password" class="input" name="password">
-
-                <!-- Confirm Password -->
-                <label for="password_confirmation" class="label text-left mt-2">Confirm Password:</label>
-                <input id="password_confirmation" type="password" class="input" name="password_confirmation">
+                <x-form.field label="Name:" name="name" />
+                <x-form.field label="Email:" name="email" type="email" />
+                <x-form.field label="Password:" name="password" type="password" />
+                <x-form.field label="Confirm Password:" name="password_confirmation" type="password" />
 
                 <button type="submit" class="btn mt-2 h-10 w-full">Create Account</button>
 
