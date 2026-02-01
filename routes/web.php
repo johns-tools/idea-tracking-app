@@ -9,7 +9,12 @@ use Laravel\Fortify\Features;
 
 // Basic route definitions.
 Route::get('/register', [RegisterUserController::class, 'create'])->middleware('guest')->name('register');
+Route::post('/register', [RegisterUserController::class, 'store'])->middleware(['guest', 'throttle:auth']);
+
 Route::get('/login', [LoginController::class, 'login'])->middleware('guest')->name('login');
+Route::post('/login', [LoginController::class, 'store'])->middleware(['guest', 'throttle:auth']);
+
+Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
 
 // Inertia-based routes.
 Route::get('/', fn () => Inertia::render('Welcome', [
