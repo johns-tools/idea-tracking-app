@@ -11,7 +11,7 @@
                 <x-form.field label="Password:" name="password" type="password" />
                 <x-form.field label="Confirm Password:" name="password_confirmation" type="password" />
 
-                <button type="submit" class="btn mt-2 h-10 w-full">Create Account</button>
+                <button type="submit" class="btn mt-2 h-10 w-full" data-test="create-account-button">Create Account</button>
 
             </div>
 

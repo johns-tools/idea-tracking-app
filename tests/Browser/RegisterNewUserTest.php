@@ -1,11 +1,11 @@
 <?php
 
-it('Registers a user', function () {
+it('registers a user', function () {
     visit('/register')
-       ->type('name', 'John Robo')
-       ->type('email', 'john@example.com')
-       ->type('password', 'password123')
-       ->type('password_confirmation', 'password123')
+       ->fill('name', 'John Robo')
+       ->fill('email', 'john@example.com')
+       ->fill('password', 'password123')
+       ->fill('password_confirmation', 'password123')
        ->press('Create Account')
        ->assertPathIs('/');
 });

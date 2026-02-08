@@ -15,7 +15,7 @@
                     <p class="text-red-500 text-sm">{{ $message }}</p>
                 @enderror
 
-                <button type="submit" class="btn mt-2 h-10 w-full">Login</button>
+                <button type="submit" class="btn mt-2 h-10 w-full" data-test="login-button">Login</button>
 
             </div>
         </form>
